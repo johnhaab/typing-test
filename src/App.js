@@ -1004,7 +1004,8 @@ class App extends Component {
         <h1>typing-test</h1>
         <TypingBox words={this.state.wordList} />
         <p>
-          user guide / <span>themes</span>
+          made with <span style={{ color: "#AB6DE2" }}>❤</span> by{" "}
+          <span style={{ color: "#AB6DE2" }}>john haab</span>
         </p>
       </div>
     );

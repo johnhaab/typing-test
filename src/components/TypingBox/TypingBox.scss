@@ -96,6 +96,11 @@
                 padding-right: .5rem;
                 padding-left: .5rem;
                 margin: 0;
+
+                @media screen and (max-width: 768px) {
+                    padding-right: .3rem;
+                    padding-left: .3rem;
+                  }
             }
 
             ul {
@@ -115,12 +120,21 @@
         .typing-score {
             display: flex;
             gap: .5rem;
+
+            @media screen and (max-width: 768px) {
+                font-size: .7rem;
+                margin-right: 2rem;
+              }
         }
   }
 
 .typing-nav .typing-length ul {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: .7rem;
+  }
 }
 
 .typing-nav .typing-length ul li {
@@ -141,6 +155,10 @@
     .current {
       color: #AB6DE2;
     }
+
+    @media screen and (max-width: 768px) {
+        font-size: .7rem;
+      }
   }
   
   .typing-input {
