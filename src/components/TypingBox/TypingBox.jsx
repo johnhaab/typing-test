@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { BiRefresh } from "react-icons/bi";
+import { GrRefresh } from "react-icons/gr";
 import "./TypingBox.scss";
 
 const TypingBox = ({ words }) => {
@@ -57,6 +57,13 @@ const TypingBox = ({ words }) => {
       setTotalTyped(totalTyped + typed.trim().length);
       updateWpm();
       setAccuracy(Math.floor((correctTyped / totalTyped) * 100));
+
+      // Check if the user has finished typing all the words in the word list
+      if (currentWordIndex + 1 === wordList.length) {
+        generateRandomWords(numWords);
+        setCurrentWordIndex(0);
+        setStartTime(null);
+      }
     }
   };
 
@@ -132,10 +139,12 @@ const TypingBox = ({ words }) => {
               onChange={handleChange}
               autoFocus
             />
-            <BiRefresh
-              className="refresh-icon"
-              onClick={(e) => refreshPage()}
-            />
+            <div className="refresh">
+              <GrRefresh
+                className="refresh-icon"
+                onClick={(e) => refreshPage()}
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -171,20 +171,24 @@
     display: flex;
     align-items: center;
     width: 100%;
+
+    .refresh {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #FAFAFA;
+      padding: .65rem;
+      margin-left: 1rem;
+      border-radius: .2rem;
+
+      .refresh-icon {
+        cursor: pointer;
+        color: #1e1e1e;
+      }
+    }
   }
   
   .typing-input {
     flex-grow: 1;
   }
   
-  .refresh-icon {
-    font-size: 1.5rem;
-    margin-left: 1rem;
-    cursor: pointer;
-
-    background-color: #FAFAFA;
-    fill: #1e1e1e;
-    color: #1e1e1e;
-    padding: 1.1rem;
-    border-radius: .2rem;
-  }
